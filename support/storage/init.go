@@ -6,11 +6,10 @@
 package storage
 
 import (
-	"gorm.io/gorm"
-	"support/logger"
-	"support/storage/config"
-	"support/storage/driver"
-	"support/storage/manager"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
+	"tools-thinker/support/storage/driver"
+	"tools-thinker/support/storage/manager"
 )
 
 // UrlPaths 不同对象存储驱动对应的Url信息
@@ -35,14 +34,6 @@ func initStorageConfig(configs []*config.StorageConfig) {
 		Configs: ossConfig,
 	}
 
-}
-
-// GetGetCloudyUrlPathFunc 获取GetCloudyUrlPathFunc
-func GetGetCloudyUrlPathFunc(db *gorm.DB) manager.GetCloudyUrlPath {
-	getDb := func() *gorm.DB {
-		return db
-	}
-	return manager.GetGetCloudyUrlPathFunc(getDb)
 }
 
 // InitOssManual 手动初始化对象存储实例
@@ -78,41 +69,6 @@ func InitStorageManagerManual(urlPaths []*config.URLPath, configs config.OssConf
 		logger.Error("InitSpecialOss InitCloudyManual error %s ", err)
 		panic(err)
 	}
-}
-
-// InitStorageManagerFromInternal 从school_internal获取配置并初始化
-func InitStorageManagerFromInternal() error {
-	logger.Error("please use InitStorageManagerFromDb to init oss")
-	// 多云配置
-	getUrlPath, getConfigs, err := manager.GetStoragePreBySchoolInternal()
-	if err != nil {
-		return err
-	}
-	UrlPaths = getUrlPath()
-	initStorageConfig(getConfigs())
-	// 多云使用
-	err = manager.InitCloudyManager(
-		getUrlPath,
-		getConfigs,
-	)
-	if err != nil {
-		return err
-	}
-	return nil
-}
-
-// InitStorageManagerFromDb 从db获取配置并初始化
-func InitStorageManagerFromDb(db *gorm.DB, configs config.OssConfigs) error {
-	err := manager.InitCloudyManager(
-		manager.GetGetCloudyUrlPathFunc(func() *gorm.DB {
-			return db
-		}),
-		manager.GetStorageConfigs(&configs),
-	)
-	if err != nil {
-		return err
-	}
-	return nil
 }
 
 // InitStorageHelper 初始化对象存储助手

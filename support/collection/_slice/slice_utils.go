@@ -1,6 +1,6 @@
 package _slice
 
-import "support/collection"
+import "tools-thinker/support/collection"
 
 // 相等
 func Equals[T collection.Equal](a []T, b []T) bool {

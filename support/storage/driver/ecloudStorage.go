@@ -8,10 +8,10 @@ import (
 	"os"
 	"path"
 	"strings"
-	"support/file"
-	"support/logger"
-	"support/storage/config"
 	"time"
+	"tools-thinker/support/file"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
 
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 	iam "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3"
@@ -22,7 +22,7 @@ import (
 	// 2.iam方面只能通过华为的sdk 来获取临时ak，sk
 	// 3.华为云存储sdk 在使用过程中没有出现问题
 	// 4.移动和云 通过的源码sdk ,在使用临时ak sk 和securitytoken 方式处理对象时，没法传入securitytoken的header参数,所以弃用
-	//"support/storage/storagecore/ecloud-obs-go-sdk/obs"
+	//"tools-thinker/support/storage/storagecore/ecloud-obs-go-sdk/obs"
 	"github.com/huaweicloud/huaweicloud-sdk-go-obs/obs"
 )
 
@@ -637,7 +637,7 @@ func (s *ecloudObsStorage) getTmpToken(
 	request.Body = &model.CreateTemporaryAccessKeyByTokenRequestBody{}
 	request.Body.Auth = &model.TokenAuth{}
 	// var DurationSeconds int32 = 3600 * 6
-	var resource interface{} = []string{fmt.Sprintf("obs:*:*:object:%s/%s*", s.config.Bucket, key)}
+	resource := []string{fmt.Sprintf("obs:*:*:object:%s/%s*", s.config.Bucket, key)}
 	request.Body.Auth.Identity = &model.TokenAuthIdentity{
 		Methods: []model.TokenAuthIdentityMethods{model.GetTokenAuthIdentityMethodsEnum().TOKEN},
 		Token: &model.IdentityToken{

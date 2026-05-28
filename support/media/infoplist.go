@@ -1,6 +1,6 @@
 package media
 
-import "support/logger"
+import "tools-thinker/support/logger"
 
 const LastestInfoplistVersion = "2.12"
 

@@ -2,7 +2,7 @@ package safe
 
 import (
 	"runtime/debug"
-	logger "support/logger"
+	logger "tools-thinker/support/logger"
 )
 
 // Safego 给要运行的方法加上defer recover，捕获panic并打印错误日志和堆栈信息

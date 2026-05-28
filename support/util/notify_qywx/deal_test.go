@@ -2,8 +2,8 @@ package notify_qywx
 
 import (
 	"fmt"
-	"support"
 	"testing"
+	"tools-thinker/support"
 )
 
 func TestSendNotify(t *testing.T) {

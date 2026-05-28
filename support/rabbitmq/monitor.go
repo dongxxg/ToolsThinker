@@ -1,8 +1,8 @@
 package rabbitmq
 
 import (
-	"support/logger"
 	"time"
+	"tools-thinker/support/logger"
 )
 
 // 负责重连

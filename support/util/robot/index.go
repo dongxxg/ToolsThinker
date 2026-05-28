@@ -7,26 +7,35 @@ package robot
 
 import (
 	"fmt"
-	mw "ginmw"
+	"os"
 	"strings"
 )
 
 func GetRobotCloudPushJobName(env, businessId string) string {
-	// UUID 36位
-	// ObjectId 24位
-	// jobName长度不能超过52
-	// aliyun-live-d-xxxxx
-	// 6 + "-" + 4 + "-" + "1" + "-" +"businessId"
-	// 14 + businessId长度
-	// businessId长度不能超过38
 	if len(businessId) > 38 {
 		businessId = businessId[:38]
 	}
 	jobName := fmt.Sprintf(
 		"%s-live-%s-%s",
 		strings.ToLower(env),
-		mw.GetShortEnv(),
+		getShortEnv(),
 		strings.ReplaceAll(businessId, "_", "-"),
 	)
 	return jobName
+}
+
+func getShortEnv() string {
+	env := os.Getenv("APP_ENV")
+	switch strings.ToLower(env) {
+	case "production", "prod":
+		return "p"
+	case "development", "dev":
+		return "d"
+	case "staging", "stage":
+		return "s"
+	case "test":
+		return "t"
+	default:
+		return "d"
+	}
 }

@@ -3,7 +3,7 @@ package util
 import (
 	"image/color"
 	"strconv"
-	logger "support/logger"
+	logger "tools-thinker/support/logger"
 )
 
 var WHITE = color.RGBA{0xF5, 0xF8, 0xFA, 0xff}

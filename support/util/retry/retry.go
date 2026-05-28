@@ -1,7 +1,7 @@
 package retry
 
 import (
-	"support/logger"
+	"tools-thinker/support/logger"
 	"time"
 )
 

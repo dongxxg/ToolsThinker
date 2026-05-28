@@ -3,8 +3,8 @@ package passwd
 import (
 	"fmt"
 	"math/rand"
-	"support/logger"
 	"time"
+	"tools-thinker/support/logger"
 )
 
 const (

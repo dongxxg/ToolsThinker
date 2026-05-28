@@ -7,10 +7,10 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-	"support/concurrent"
-	"support/file"
-	"support/logger"
-	"support/storage/config"
+	"tools-thinker/support/concurrent"
+	"tools-thinker/support/file"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
 )
 
 var GO_LIMIT_COUNT = 20

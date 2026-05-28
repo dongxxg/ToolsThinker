@@ -2,8 +2,8 @@ package concurrent
 
 import (
 	"runtime/debug"
-	"support/logger"
 	"sync"
+	"tools-thinker/support/logger"
 )
 
 // GoLimit 限制一个同步任务中并发的协程数

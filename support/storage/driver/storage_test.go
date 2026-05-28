@@ -3,9 +3,9 @@ package driver
 import (
 	"fmt"
 	"os"
-	"support/logger"
-	storageConfig "support/storage/config"
 	"testing"
+	"tools-thinker/support/logger"
+	storageConfig "tools-thinker/support/storage/config"
 )
 
 func TestAliGetObject(t *testing.T) {

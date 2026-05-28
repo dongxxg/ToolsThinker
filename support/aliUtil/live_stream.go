@@ -3,7 +3,7 @@ package aliUtil
 import (
 	"errors"
 	"fmt"
-	"support/util"
+	"tools-thinker/support/util"
 )
 
 type PullStreamInfo struct {

@@ -11,3 +11,4 @@ docs/swagger*
 .idea
 .idea/*
 *.exe
+.claude/

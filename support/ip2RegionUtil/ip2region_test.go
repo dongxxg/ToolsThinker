@@ -2,9 +2,9 @@ package ip2RegionUtil
 
 import (
 	"fmt"
-	"support/util/http_util"
 	"testing"
 	"time"
+	"tools-thinker/support/util/http_util"
 
 	"github.com/lionsoul2014/ip2region/binding/golang/xdb"
 )

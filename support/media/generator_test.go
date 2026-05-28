@@ -3,8 +3,8 @@ package media
 import (
 	"fmt"
 	"os"
-	"support/logger"
 	"testing"
+	"tools-thinker/support/logger"
 )
 
 func TestM3u8Generator(t *testing.T) {

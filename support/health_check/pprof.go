@@ -3,7 +3,7 @@ package hc
 import (
 	"github.com/shirou/gopsutil/cpu"
 	"github.com/shirou/gopsutil/v3/mem"
-	"support/logger"
+	"tools-thinker/support/logger"
 	"time"
 )
 

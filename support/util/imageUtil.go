@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"image"
 	"image/png"
-	logger "support/logger"
+	logger "tools-thinker/support/logger"
 )
 
 func Image2Bytes(m image.Image) (data []byte, errinfo error) {

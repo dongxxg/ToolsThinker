@@ -2,7 +2,7 @@ package util
 
 import (
 	"encoding/json"
-	"support/logger"
+	"tools-thinker/support/logger"
 )
 
 func ConvertToJsonStr(v interface{}) string {

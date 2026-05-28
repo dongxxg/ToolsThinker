@@ -2,8 +2,8 @@ package support
 
 import (
 	"runtime/debug"
-	"support/logger"
 	"testing"
+	"tools-thinker/support/logger"
 )
 
 func TestPanicLog(t *testing.T) {

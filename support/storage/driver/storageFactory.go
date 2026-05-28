@@ -2,8 +2,8 @@ package driver
 
 import (
 	"fmt"
-	"support/logger"
-	"support/storage/config"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
 
 	openapi "github.com/alibabacloud-go/darabonba-openapi/client"
 	sts20150401 "github.com/alibabacloud-go/sts-20150401/client"

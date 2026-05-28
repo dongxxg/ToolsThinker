@@ -1,7 +1,7 @@
 package _map
 
 import (
-	"support/collection"
+	"tools-thinker/support/collection"
 )
 
 type _map = map[string]any

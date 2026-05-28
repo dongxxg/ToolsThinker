@@ -2,7 +2,7 @@ package _set
 
 import (
 	"fmt"
-	"support/collection"
+	"tools-thinker/support/collection"
 )
 
 var (

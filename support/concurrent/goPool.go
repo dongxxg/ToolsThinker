@@ -5,8 +5,8 @@ package concurrent
 import (
 	"fmt"
 	"runtime/debug"
-	"support/logger"
 	"time"
+	"tools-thinker/support/logger"
 )
 
 // ErrScheduleTimeout returned by Pool to indicate that there no free

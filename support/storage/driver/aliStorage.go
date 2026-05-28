@@ -11,10 +11,10 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"support/file"
-	"support/logger"
-	"support/storage/config"
 	"time"
+	"tools-thinker/support/file"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
 
 	sts20150401 "github.com/alibabacloud-go/sts-20150401/client"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"

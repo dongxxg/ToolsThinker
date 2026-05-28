@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	storageConfig "support/storage/config"
 	"testing"
+	storageConfig "tools-thinker/support/storage/config"
 
 	"github.com/go-playground/assert/v2"
 	"github.com/north-team/huawei-obs-sdk-go/obs"
@@ -45,7 +45,7 @@ func initHWClient() {
 
 func TestHW_SignFile(t *testing.T) {
 	initHWClient()
-	getSignedUrl := hst.SignFile("TestGetDirTokenWithAction", int64(1200))
+	_, getSignedUrl := hst.SignFile("TestGetDirTokenWithAction", int64(1200))
 	resp := execGetAction(getSignedUrl)
 	// 使用assert来验证下载的内容是否与预期匹配
 	assert.Equal(t, "TestGetDirTokenWithAction", resp)

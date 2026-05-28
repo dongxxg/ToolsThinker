@@ -1,6 +1,6 @@
 package _slice
 
-import "support/collection"
+import "tools-thinker/support/collection"
 
 func GetIntPtr(s []any, idx int) *int {
 	return collection.ParseNumberPtr[int](s[idx])

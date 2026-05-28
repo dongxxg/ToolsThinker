@@ -1,7 +1,7 @@
 package config
 
 import (
-	"support"
+	"tools-thinker/support"
 )
 
 type URLPath struct {

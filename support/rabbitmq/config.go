@@ -3,8 +3,8 @@ package rabbitmq
 import (
 	"encoding/json"
 	"fmt"
-	"support/logger"
-	"support/util"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/util"
 )
 
 type Config struct {

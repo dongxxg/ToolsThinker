@@ -10,7 +10,7 @@ import (
 
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
-	storageConfig "support/storage/config"
+	storageConfig "tools-thinker/support/storage/config"
 )
 
 var (

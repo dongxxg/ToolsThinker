@@ -7,8 +7,8 @@ import (
 	"os"
 	"path"
 	"strings"
-	"support/logger"
-	"support/storage/config"
+	"tools-thinker/support/logger"
+	"tools-thinker/support/storage/config"
 
 	"github.com/north-team/huawei-obs-sdk-go/obs"
 )

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"support/file"
-	storageConfig "support/storage/config"
 	"testing"
+	"tools-thinker/support/file"
+	storageConfig "tools-thinker/support/storage/config"
 
 	"github.com/go-playground/assert/v2"
 	"github.com/huaweicloud/huaweicloud-sdk-go-obs/obs"

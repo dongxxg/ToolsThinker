@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-	"support/logger"
+	"tools-thinker/support/logger"
 	"unicode"
 
 	"github.com/pkg/errors"

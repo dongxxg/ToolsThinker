@@ -1,7 +1,7 @@
 package manager
 
 import (
-	"support/storage/driver"
+	"tools-thinker/support/storage/driver"
 )
 
 // 通过配置 manager.URLPath 来初始化对应的 ossHelper

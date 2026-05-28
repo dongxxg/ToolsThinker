@@ -2,7 +2,7 @@ package notify_qywx
 
 import (
 	"encoding/json"
-	"support/util/http_util"
+	"tools-thinker/support/util/http_util"
 )
 
 // 通知消息
