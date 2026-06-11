@@ -27,15 +27,17 @@ func Init(window fyne.Window) {
 	RefreshContent = container.NewVBox(
 		widget.NewLabel("Please select a menu from the left."),
 	)
-	// 创建右下的“日志打印区域”
+	// 创建右下的"日志打印区域"
 	logOutput := widget.NewMultiLineEntry()
 	logOutput.Wrapping = fyne.TextWrapWord
 	logOutput.SetMinRowsVisible(5)
 	logOutput.Disable() // 禁止用户编辑
 
 	PrintLog = func(message string) {
-		logOutput.SetText(
-			logOutput.Text + "\n" + message)
+		fyne.Do(func() {
+			logOutput.SetText(
+				logOutput.Text + "\n" + message)
+		})
 	}
 	// 右侧上下分区（页面内容 + 日志输出）
 	Content = container.NewVSplit(
